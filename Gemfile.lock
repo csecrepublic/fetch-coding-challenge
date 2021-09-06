@@ -25,6 +25,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
+  linux
 
 DEPENDENCIES
   require_all
@@ -32,6 +33,8 @@ DEPENDENCIES
   sinatra
   thin
 
+RUBY VERSION
+   ruby 2.7.2p137
+
 BUNDLED WITH
    2.2.27
-bundle lock --add-platform x86_64_linux
