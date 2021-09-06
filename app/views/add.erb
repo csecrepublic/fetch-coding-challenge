@@ -1,0 +1,38 @@
+<h3>Woo-hoo! Let's add some points:</h3>
+<form method="POST" action="/add">
+    <label for="payer">Payer name:</label><br>
+    <input type="text" id="payer" name="payer" required><br>
+
+    <label for="points">Points to add:</label><br>
+    <input type="number" id="points" name="points" required><br>
+    
+    <div id="ts-div">
+        <div id="ts-header">
+            <span id="ts-title">Timestamp:</span><br>
+            <span class="subtitle">If you do not provide a timestamp, this transaction will use the current date and time.</span><br>
+        </div>
+        
+        <div id="ts-fields">
+            <div id="ts-col-1">
+                <label for="ts_month">Month:</label><br>
+                <input id="ts_month" name="ts_month" type="number" min="1" max="12" value=<%=Time.now.month%>><br>
+
+                <label for="ts_day">Day:</label><br>
+                <input id="ts_day" name="ts_day" type="number" min="0" max="31" value=<%=Time.now.day%>><br>
+
+                <label for="ts_year">Year:</label><br>
+                <input id="ts_year" name="ts_year" type="number" min="1000" max=<%=Time.now.year%> value=<%=Time.now.year%>><br>
+            </div>
+
+            <div id="ts-col-2">
+                <label for="ts_hour">Hour:</label><br>
+                <input id="ts_hour" name="ts_hour" type="number" min="0" max="23" value=<%=Time.now.hour%>><br>
+
+                <label for="ts_min">Minute:</label><br>
+                <input id="ts_min" name="ts_min" type="number" min="0" max="59" value=<%=Time.now.min%>><br>
+            </div>
+        </div>
+    </div>
+
+    <input type="submit" class="button">
+</form>
