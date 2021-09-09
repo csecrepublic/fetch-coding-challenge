@@ -18,7 +18,7 @@ I initially planned to use Ruby on Rails for this project, but I realized I didn
 ## Issues & ideas
 * MAJOR ERROR: When the app is run locally, the app fails to establish a connection with the Payers table
 * More robust form validation
-* Refactor controller into modules
+* Refactor controller code into models
 
 ## Instructions
 1. [Install Ruby](https://www.ruby-lang.org/en/documentation/installation/). You can check if Ruby is already installed by running `ruby -v` in the terminal.
