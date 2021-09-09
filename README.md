@@ -15,8 +15,12 @@ When the user spends points, the controller orders the PayerTransactions table b
 
 I initially planned to use Ruby on Rails for this project, but I realized I didn't need that level of robustness. Sinatra is a much lighter-weight framework that also offers well-documented database support through ActiveRecord.
 
-## Issues & ideas
-* MAJOR ERROR: When the app is run locally, the app fails to establish a connection with the Payers table
+## No connection issue
+When the app is run locally, it fails to establish a connection with the Payers table. I have tried a couple things to remedy this: I checked Stack Overflow to see if anyone had had similar problems, and most of the answers said that a table will not establish a connection until it's being used. I tried to establish a connection by creating a new Payer record in IRB, but I was getting the same error. Any call to a rake command would produce an error as well. I tried following a few beginner's tutorials to make sure my `config` and `environment` files were set up correctly, and I triple-checked all my file paths. 
+
+Originally, I mapped out the program with POROs (plain old Ruby objects) so that I could get the site up and running and really understand my algorithm before transferring everything to ActiveRecord, which is a newer framework for me. The site was working fine (though obviously not storing any information after each HTTP request), so I know the issue is with the database.
+
+## Other issues & ideas
 * More robust form validation
 * Refactor controller code into models
 
