@@ -1,6 +1,11 @@
 <h3>Welcome! Here are your point balances:</h3>
-<p> Payer: </p>
-<p> Points: </p>
+
+<div id="payer-table-div">
+    <%@payer_table.each do |payer|%>
+        <%="Payer: " + payer.select(:name)%>
+        <%="Points: " + payer.select(:points)%>
+    <%end%>
+</div>
 
 <div id="button-div">
     <button type="button" class="button" id="add-btn"><a href="/add">Add Points</a></button>
